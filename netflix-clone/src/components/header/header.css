@@ -1,0 +1,45 @@
+.header_outerWrap {
+  background-color: #111;
+  /* background-color: transparent; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.header_outerWrap .left_navItem_wrap,
+.header_outerWrap .right_navItem_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_outerWrap .left_navItem_wrap .navItem,
+.header_outerWrap .right_navItem_wrap .navItem {
+  list-style: none;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+.header_outerWrap .left_navItem_wrap .navItem .navLink,
+.header_outerWrap .right_navItem_wrap .navItem .navLink {
+  text-decoration: none;
+  color: #fff;
+}
+.header_outerWrap .left_navItem_wrap .navItem .netflix_logo,
+.header_outerWrap .right_navItem_wrap.navItem .netflix_logo {
+  width: 100px;
+  height: auto;
+}
+
+.left_navItem_wrap .navItem:not(:nth-child(1)) {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .left_navItem_wrap .navItem:not(:nth-child(1)) {
+    display: block !important;
+  }
+  .header_outerWrap {
+    width: 90%;
+  }
+}
