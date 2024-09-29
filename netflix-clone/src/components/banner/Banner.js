@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./banner.css";
 import axios from "../../utils/axios";
 import requests from "../../utils/requests";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 function Banner() {
   const [movie, setMovie] = useState({});
@@ -29,6 +31,9 @@ function Banner() {
     <div
       className="banner"
       style={{
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
       }}
     >
@@ -37,8 +42,15 @@ function Banner() {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner-btns">
-          <button className="banner_btn play">Play</button>
-          <button className="banner_btn">More Info</button>
+          <button className="banner_btn play">
+            <span>
+              <PlayArrowIcon className="playIcon" />
+              Play
+            </span>
+          </button>
+          <button className="banner_btn morInfoIcon">
+            <InfoOutlinedIcon /> <span>More Info</span>
+          </button>
         </div>
         <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
       </div>

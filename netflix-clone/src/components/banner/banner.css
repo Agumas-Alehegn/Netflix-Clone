@@ -1,7 +1,4 @@
 .banner {
-  background-size: "cover";
-  background-position: "center";
-  background-repeat: "no-repeat";
   margin-top: 10vh;
   margin-bottom: -80px;
   height: 80vh;
@@ -27,6 +24,10 @@
   max-width: 360px;
   height: 80px;
 }
+.banner-btns {
+  display: flex;
+  align-items: center;
+}
 
 .banner_btn {
   cursor: pointer;
@@ -44,15 +45,28 @@
   color: #000;
   background-color: #fff;
 }
+span {
+  display: flex;
+  align-items: center;
+}
+.playIcon {
+  margin-right: 10px;
+}
+.morInfoIcon {
+  display: flex;
+  align-items: center;
+}
+.morInfoIcon span {
+  margin-left: 10px;
+}
 
 .banner_btn:hover {
   color: #000;
   background-color: #c6c6c6;
   transition: all 0.2s linear;
 }
-
 .banner_fadeBottom {
-  height: 4cqmin;
+  height: 41vh;
   background-image: linear-gradient(
     180deg,
     transparent,
